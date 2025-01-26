@@ -59,9 +59,9 @@
         }
 
         .reg input[type='text'],
-        .reg input[type='email'],
         .reg input[type='password'],
-        .reg input[type='submit'] {
+        .reg input[type='submit'],
+        .reg button {
             width: 80%;
             padding: 10px;
             margin: 10px 0;
@@ -70,7 +70,8 @@
             font-size: 16px;
         }
 
-        .reg input[type='submit'] {
+        .reg input[type='submit'],
+        .reg button {
             background-color: #ffcc00;
             color: #000;
             font-weight: bold;
@@ -78,7 +79,8 @@
             transition: background-color 0.3s ease;
         }
 
-        .reg input[type='submit']:hover {
+        .reg input[type='submit']:hover,
+        .reg button:hover {
             background-color: #e6b800;
         }
 
@@ -94,7 +96,6 @@
     </style>
 </head>
 <body>
-    <!-- Header with logo and links -->
     <div class="header">
         <div class="logo-container">
             <img src="logo.png" alt="Logo">
@@ -104,25 +105,19 @@
         </div>
     </div>
 
-    <!-- Registration form -->
+    <!-- Login form -->
     <div class="reg">
-        <h1>Create Account</h1>
-        <form>
+        <h1>Login</h1>
+        <form action="main page.html" method="GET">
             <label for="username">Username:</label><br>
-            <input type="text" id="username" placeholder="Enter your username"><br>
-
-            <label for="email">Email ID:</label><br>
-            <input type="email" id="email" placeholder="Enter your email"><br>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required><br>
 
             <label for="password">Password:</label><br>
-            <input type="password" id="password" placeholder="Enter your password"><br>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required><br>
 
-            <label for="confirm-password">Confirm Password:</label><br>
-            <input type="password" id="confirm-password" placeholder="Confirm your password"><br>
-
-            <input type="submit" value="Sign Up"><br>
-            <a href="login.html">Already have an account? Click here</a>
+            <input type="submit" value="Login"><br>
         </form>
+        <button onclick="window.location.href='main page.html'">Sign Up</button>
     </div>
 </body>
 </html>
