@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <style>
+        body {
+            background-image: url('bg.jpg');
+            background-position: center;
+            background-size: cover;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header container with logo and links */
+        .header {
+            display: flex;
+            justify-content: space-between; /* Align logo to the left and links to the right */
+            align-items: center;
+            padding: 10px 20px;
+            background-color: rgba(12, 11, 11, 0.8);
+        }
+
+        /* Logo styling */
+        .logo-container img {
+            width: 60px;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .logo-container img:hover {
+            transform: scale(1.1); /* Slight zoom-in effect on hover */
+        }
+
+        /* Links styling */
+        .link a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            margin-left: 20px;
+            transition: color 0.3s;
+        }
+
+        .link a:hover {
+            color: #ffcc00;
+        }
+
+        /* Centered content with animation */
+        .image {
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 50%;
+            padding: 20px;
+            text-align: center;
+            border-radius: 15px;
+            animation: fadeIn 2s ease-out;
+            margin: 100px auto 0 auto; /* Centering */
+            box-sizing: border-box;
+        }
+
+        .image img {
+            width: 150px; /* Size of the image inside the centered container */
+            border-radius: 10px;
+            animation: scaleUp 2s ease-out;
+        }
+
+        .image h1 {
+            font-family: 'Arial', sans-serif;
+            font-size: 2.5em;
+            color: white;
+            animation: slideIn 2s ease-out;
+            margin-top: 20px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes scaleUp {
+            0% {
+                transform: scale(0);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with logo and links -->
+    <div class="header">
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <div class="link">
+            <a href="accout create.html">Create/Login</a>
+            <a href="abtus.html">About Us</a>
+
+        </div>
+    </div>
+
+    <!-- Centered content with animation -->
+    <div class="image">
+        <img src="logo.png" alt="logo">
+        <h1>Welcome to Kolly Reviews</h1>
+    </div>
+</body>
+</html>

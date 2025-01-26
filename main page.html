@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kolly Reviews</title>
+    <style>
+        body {
+            background-image: url('bg.jpg');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            overflow: auto; /* Allow entire page to scroll vertically */
+        }
+
+        .upper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: rgb(12, 11, 11);
+        }
+
+        .upper img {
+            width: 50px;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .upper .search-container {
+            flex-grow: 1;
+            margin: 0 20px;
+        }
+
+        .upper .search-container input[type="search"] {
+            width: 50%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .upper .About-us {
+            margin-right: 20px;
+            font-size: 18px;
+            color: #ffffff;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .movies {
+            margin: 20px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            flex: 1;
+            box-sizing: border-box;
+        }
+
+        .movies h1 {
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Tamil Movie Section */
+        .tamilmovie-list, .southmovie-list, .celebrity-list {
+            display: flex;
+            gap: 80px;
+            overflow-x: scroll; /* Enables horizontal scrolling */
+            padding-bottom: 20px; /* To create space for scroll bar */
+        }
+
+        .tamilmovie-item, .southmovie-item, .celebrity-item {
+            text-align: center;
+            flex: none;
+            width: 200px;
+            box-sizing: border-box;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .tamilmovie-item img, .southmovie-item img, .celebrity-item img {
+            width: 200px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .tamilmovie-item p, .southmovie-item p, .celebrity-item p {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px 0 0;
+        }
+
+        .tamilmovie-item:hover, .southmovie-item:hover, .celebrity-item:hover {
+            transform: scale(1.2);
+            box-shadow: 12px 12px 12px black, -10px -10px -10px white;
+        }
+
+        /* Scrollbar Styling */
+        .tamilmovie-list::-webkit-scrollbar, .southmovie-list::-webkit-scrollbar, .celebrity-list::-webkit-scrollbar {
+            height: 10px;
+        }
+
+        .tamilmovie-list::-webkit-scrollbar-thumb, .southmovie-list::-webkit-scrollbar-thumb, .celebrity-list::-webkit-scrollbar-thumb {
+            background-color: #555;
+            border-radius: 10px;
+        }
+
+        .tamilmovie-list::-webkit-scrollbar-track, .southmovie-list::-webkit-scrollbar-track, .celebrity-list::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="upper">
+        <img src="logo.png" alt="Site Logo">
+        <div class="search-container">
+            <input type="search" id="search" placeholder="Search movies">
+        </div>
+        <div class="About-us">
+            <a href="abtus.html">About us</a>
+        </div>
+    </div>
+
+    <div class="movies">
+        <h1>Kollywood 2024</h1>
+
+        <div class="tamilmovie-list">
+            <div class="tamilmovie-item">
+                <a href="goat.html"><img src="goat.jpeg" alt="GOAT Movie Poster"></a>
+                <p>Goat (The Greatest Of All Times)</p>
+            </div>
+            <div class="tamilmovie-item">
+                <a href="Amaran.html"><img src="amaran.jpg" alt="Amaran Movie Poster"></a>
+                <p>Amaran</p>
+            </div>
+            <div class="tamilmovie-item">
+                <a href="rp.html"><img src="lubber.jpeg" alt="Lubber Pandu Movie Poster"></a>
+                <p>Lubber Pandu</p>
+            </div>
+            <div class="tamilmovie-item">
+                <a href="mei.html"><img src="mei.jpg" alt="Meiazhagan Movie Poster"></a>
+                <p>Meiazhagan</p>
+            </div>
+            <div class="tamilmovie-item">
+                <a href="ind.html"><img src="ind.jpeg" alt="Indian 2 Movie Poster"></a>
+                <p>Indian 2</p>
+            </div>
+        </div>
+
+    
+        <h1>Other Industries Hit Movies</h1>
+        <div class="southmovie-list">
+            <div class="southmovie-item">
+                <a href="https://www.thehindu.com/entertainment/movies/premalu-movie-review-girish-ads-youthful-drama-is-a-winner-with-its-fresh-humorous-treatment-of-a-run-of-the-mill-story/article67828852.ece"><img src="premalu.jpeg" alt="Premalu Movie Poster"></a>
+                <p>Premalu</p>
+            </div>
+            <div class="southmovie-item">
+               <a href="https://www.youtube.com/watch?v=Eesv51rFa9A"> <img src="aa.jpeg" alt="Avesham Movie Poster"></a>
+                <p>Avesham</p>
+            </div>
+            <div class="southmovie-item">
+                <a href="https://timesofindia.indiatimes.com/entertainment/malayalam/movie-reviews/bramayugam/movie-review/107724689.cms"><img src="brahmayugam.jpeg" alt="Brahmayugam Movie Poster"></a>
+                <p>Brahmayugam</p>
+            </div>
+            <div class="southmovie-item">
+                <a href="https://indianexpress.com/article/entertainment/malayalam/manjummel-boys-movie-about-faith-not-religion-9317884/"><img src="mb.jpeg" alt="Manjumel Boys Movie Poster"></a>
+             <p>Manjumel Boys</p>
+            </div>
+        </div>
+
+        
+        <h1>Celebrities Top 5 hits of the decade(2014-2024)</h1>
+        <div class="celebrity-list">
+            <div class="celebrity-item">
+                <a href="rajini.html"><img src="rajni.jpeg" alt="rajini"></a>
+                <p>Rajinikanth</p>
+            </div>
+            <div class="celebrity-item">
+                <a href="vijay.html"><img src="vijay.jpeg" alt="Vijay"></a>
+                <p>Vijay</p>
+            </div>
+            <div class="celebrity-item">
+                <a href="ajith.html"><img src="ajith.jpg" alt="ajith"></a>
+                <p>Ajith Kumar</p>
+            </div>
+            
+            <div class="celebrity-item">
+                <a href="kamal.html"><img src="kamal.jpg" alt="kamal"></a>
+                <p>Kamal Hasan</p>
+            </div>
+            <div class="celebrity-item">
+                <a href="suriya.html"><img src="suriya.webp" alt="kamal"></a>
+                <p>Suriya</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

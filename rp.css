@@ -1,0 +1,95 @@
+
+body {
+    background: url('bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    line-height: 1.6;
+    padding: 20px;
+    position: relative;
+}
+
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: -1; 
+}
+
+
+upper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: rgb(12, 11, 11);
+}
+.upper img {
+    width: 50px;
+    height: auto;
+    border-radius: 5px;
+}
+.upper .search-container {
+    flex-grow: 1;
+    margin: 0 20px;
+}
+.upper .search-container input[type="search"] {
+    width: 50%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.movies {
+    margin: 20px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.123);
+    border-radius: 10px;
+}
+.movies h1 {
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #fff;  
+    text-align: center;
+    margin-bottom: 20px;
+}
+.first img{
+    width: 60%;
+    max-width: 400px; 
+    margin: 20px auto; 
+    display: block;
+    border-radius: 8px;
+}
+
+
+.cast-crew, .review,.ppl {
+    background-color: rgba(255, 255, 255, 0.9); 
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+
+.cast-crew p, .review ,.ppl{
+    font-size: 1.1em;
+    color: #333; 
+}
+
+.review img {
+    width: 80%; 
+    max-width: 600px; 
+    margin: 20px auto;
+    display: block;
+    border-radius: 8px;
+}

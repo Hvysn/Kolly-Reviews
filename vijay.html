@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kolly Review's</title>
+    <style>
+        body {
+            background-image: url('bg.jpg');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+        }
+
+        /* Header container with logo and links */
+        .header {
+            display: flex;
+            justify-content: space-between; /* Align logo and links */
+            align-items: center;
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .logo-container img {
+            width: 60px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .link a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            margin-left: 20px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .link a:hover {
+            color: #ffcc00;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0 auto;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #444;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+            font-size: 1.2em;
+        }
+
+        td {
+            color: #ccc;
+            font-size: 1.1em;
+        }
+
+        tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        tr:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+        }
+
+        img {
+            width: 150px;  /* Set width */
+            height: 225px; /* Set height */
+            object-fit: cover; /* Ensure the image covers the area */
+            border-radius: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Top Header with logo and links -->
+    <div class="header">
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <div class="link">
+            <a href="about.html">About Us</a>
+        </div>
+    </div>
+    <h1>Vijay's Top 5 of the Decade</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Poster</th>
+                <th>Movie Name</th>
+                <th>Directed By</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="Kaththi_poster.jpg" alt="Movie 1 Poster"></td>
+                <td>Kaththi</td>
+                <td>AR Murugadass</td>
+            </tr>
+
+            <tr>
+                <td><img src="Master_2021_poster.jpg" alt="Movie 2 Poster"></td>
+                <td>Master</td>
+                <td>Lokesh Kanagaraj</td>
+            </tr>
+
+            <tr>
+                <td><img src="Leo_(2023_Indian_film).jpg" alt="Movie 3 Poster"></td>
+                <td>Leo</td>
+                <td>Lokesh Kanagaraj</td>
+            </tr>
+
+            <tr>
+                <td><img src="Mersal_film_poster.jpg" alt="Movie 4 Poster"></td>
+                <td>Mersal</td>
+                <td>Atlee</td>
+            </tr>
+            <tr>
+                <td><img src="The_Greatest_of_All_Time.jpg" alt="Movie 5 Poster"></td>
+                <td>GOAT</td>
+                <td>venkat Prabhu</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
