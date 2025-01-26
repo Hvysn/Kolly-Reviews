@@ -59,9 +59,9 @@
         }
 
         .reg input[type='text'],
+        .reg input[type='email'],
         .reg input[type='password'],
-        .reg input[type='submit'],
-        .reg button {
+        .reg input[type='submit'] {
             width: 80%;
             padding: 10px;
             margin: 10px 0;
@@ -70,8 +70,7 @@
             font-size: 16px;
         }
 
-        .reg input[type='submit'],
-        .reg button {
+        .reg input[type='submit'] {
             background-color: #ffcc00;
             color: #000;
             font-weight: bold;
@@ -79,8 +78,7 @@
             transition: background-color 0.3s ease;
         }
 
-        .reg input[type='submit']:hover,
-        .reg button:hover {
+        .reg input[type='submit']:hover {
             background-color: #e6b800;
         }
 
@@ -96,6 +94,7 @@
     </style>
 </head>
 <body>
+    <!-- Header with logo and links -->
     <div class="header">
         <div class="logo-container">
             <img src="logo.png" alt="Logo">
@@ -105,19 +104,26 @@
         </div>
     </div>
 
-    <!-- Login form -->
+    <!-- Registration form -->
     <div class="reg">
-        <h1>Login</h1>
+        <h1>Create Account</h1>
+        <!-- The form action points to the main page -->
         <form action="main page.html" method="GET">
             <label for="username">Username:</label><br>
-            <input type="text" id="username" name="username" placeholder="Enter your username" required><br>
+            <input type="text" id="username" placeholder="Enter your username" required><br>
+
+            <label for="email">Email ID:</label><br>
+            <input type="email" id="email" placeholder="Enter your email" required><br>
 
             <label for="password">Password:</label><br>
-            <input type="password" id="password" name="password" placeholder="Enter your password" required><br>
+            <input type="password" id="password" placeholder="Enter your password" required><br>
 
-            <input type="submit" value="Login"><br>
+            <label for="confirm-password">Confirm Password:</label><br>
+            <input type="password" id="confirm-password" placeholder="Confirm your password" required><br>
+
+            <input type="submit" value="Sign Up"><br>
+            <a href="login.html">Already have an account? Click here</a>
         </form>
-        <button onclick="window.location.href='main page.html'">Sign Up</button>
     </div>
 </body>
 </html>
