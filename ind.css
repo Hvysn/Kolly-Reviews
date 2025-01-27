@@ -93,3 +93,59 @@ h1 {
     display: block;
     border-radius: 8px;
 }
+#review-section {
+    width:100%;
+    background-color: white;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    color: black;
+}
+
+/* Review input */
+#review-input {
+    width: 80%;
+    height: 100px;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #000;  /* Text in black for review box */
+}
+
+/* Submit button */
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #dfe20e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: gold;
+}
+
+/* Review block styling */
+.review {
+    border-top: 1px solid #dddddd54;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+.review-rating {
+    color: gold;
+}
+
+.review-text {
+    font-size: 16px;
+    margin-top: 5px;
+}
