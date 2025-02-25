@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kolly Review's</title>
+    <style>
+        body {
+            background-image: url('bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+        }
+
+        /* Header container with logo and links */
+        .header {
+            display: flex;
+            justify-content: space-between; /* Align logo and links */
+            align-items: center;
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .logo-container img {
+            width: 60px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .link a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            margin-left: 20px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .link a:hover {
+            color: #ffcc00;
+        }
+
+        /* Registration form styling */
+        .reg {
+            background-color: rgba(3, 3, 3, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 400px;
+            margin: 100px auto; /* Center the form */
+            text-align: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .reg h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .reg input[type='text'],
+        .reg input[type='password'],
+        .reg input[type='submit'] {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .reg input[type='submit'] {
+            background-color: #ffcc00;
+            color: #000;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .reg input[type='submit']:hover {
+            background-color: #e6b800;
+        }
+
+        .reg a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .reg a:hover {
+            text-decoration: underline;
+        }
+    </style>
+<script>
+        function showMessage() {
+            let email = document.getElementById("emailInput").value;
+            if (email) {
+                document.getElementById("message").innerText = "Email is sent to your given email ID: " + email;
+            } else {
+                document.getElementById("message").innerText = "Please enter an email.";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <div class="link">
+            <a href="abtus.html">About Us</a>
+        </div>
+    </div>
+
+    <!-- Remember form -->
+    <div class="reg">
+        <h1>Login</h1>
+        <form action="main page.html" method="GET"> <!-- Action points to the main page -->
+            <label for="Email">Emailid:</label><br>
+            <input type="email" id="username" placeholder="Enter your email" required><br>
+            <input type="submit" value="Confirm"><br>
+            <a href="accout create.html">Don't have an account? Click here</a><br><br>
+            <a href="remember.html">Forget password?Click Here</a>
+        </form>
+    </div>
+</body>
+</html>
