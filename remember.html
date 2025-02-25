@@ -114,18 +114,22 @@
         </form>
     </div>
     <script>
-        function showMessage() {
-            let email = document.getElementById("emailInput").value.trim();
-            let messageElement = document.getElementById("message");
-            
-            if (email) {
-                messageElement.innerText = "A mail has been sent to your email ID: " + email;
-                messageElement.style.color = "green"; // Success message color
-            } else {
-                messageElement.innerText = "Please enter a valid email.";
-                messageElement.style.color = "red"; // Error message color
-            }
+    function showMessage() {
+        let emailInput = document.getElementById("emailInput");
+        let email = emailInput.value.trim();
+        let messageElement = document.getElementById("message");
+
+        if (email) {
+            messageElement.innerText = "A mail has been sent to your email ID: " + email;
+            messageElement.style.color = "green";
+        } else {
+            messageElement.innerText = "Please enter a valid email.";
+            messageElement.style.color = "red";
         }
-    </script>
+    }
+</script>
+</body>
+</html>
+
 </body>
 </html>
