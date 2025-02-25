@@ -15,10 +15,9 @@
             color: #ffffff;
         }
 
-        /* Header container with logo and links */
         .header {
             display: flex;
-            justify-content: space-between; /* Align logo and links */
+            justify-content: space-between;
             align-items: center;
             padding: 10px 20px;
             background-color: rgba(0, 0, 0, 0.8);
@@ -43,13 +42,12 @@
             color: #ffcc00;
         }
 
-        /* Registration form styling */
         .reg {
             background-color: rgba(3, 3, 3, 0.8);
             padding: 20px;
             border-radius: 10px;
             max-width: 400px;
-            margin: 100px auto; /* Center the form */
+            margin: 100px auto;
             text-align: center;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
         }
@@ -81,14 +79,10 @@
             background-color: #e6b800;
         }
 
-        .reg a {
-            color: #ffcc00;
-            text-decoration: none;
-            font-size: 14px;
-        }
-
-        .reg a:hover {
-            text-decoration: underline;
+        .message {
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -102,34 +96,39 @@
         </div>
     </div>
 
-    <!-- Remember form -->
     <div class="reg">
         <h1>Forgot Password</h1>
-        <form action="main page.html" method="GET"> <!-- Action points to the main page -->
-            <label for="Email">Emailid:</label><br>
-            <input type="email" id="email" placeholder="Enter your email" required><br>
-            <label for="Email">Confirm Emailid:</label><br>
-            <input type="email" id="email" placeholder="Enter your email" required><br>
-            <input type="submit" value="Confirm"><br>
+        <form onsubmit="showMessage(event)"> 
+            <label for="email">Email ID:</label><br>
+            <input type="email" id="emailInput" placeholder="Enter your email" required><br>
+
+            <label for="confirmEmail">Confirm Email ID:</label><br>
+            <input type="email" id="confirmEmail" placeholder="Re-enter your email" required><br>
+
+            <input type="submit" value="Confirm">
         </form>
+        <p id="message" class="message"></p>
     </div>
+
     <script>
-    function showMessage() {
-        let emailInput = document.getElementById("emailInput");
-        let email = emailInput.value.trim();
-        let messageElement = document.getElementById("message");
+        function showMessage(event) {
+            event.preventDefault(); // Prevents form submission
 
-        if (email) {
-            messageElement.innerText = "A mail has been sent to your email ID: " + email;
-            messageElement.style.color = "green";
-        } else {
-            messageElement.innerText = "Please enter a valid email.";
-            messageElement.style.color = "red";
+            let email = document.getElementById("emailInput").value.trim();
+            let confirmEmail = document.getElementById("confirmEmail").value.trim();
+            let messageElement = document.getElementById("message");
+
+            if (email === "" || confirmEmail === "") {
+                messageElement.innerText = "Please fill in both fields.";
+                messageElement.style.color = "red";
+            } else if (email !== confirmEmail) {
+                messageElement.innerText = "Emails do not match!";
+                messageElement.style.color = "red";
+            } else {
+                messageElement.innerText = "A mail has been sent to your email ID: " + email;
+                messageElement.style.color = "green";
+            }
         }
-    }
-</script>
-</body>
-</html>
-
+    </script>
 </body>
 </html>
