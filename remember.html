@@ -91,16 +91,6 @@
             text-decoration: underline;
         }
     </style>
-<script>
-        function showMessage() {
-            let email = document.getElementById("emailInput").value;
-            if (email) {
-                document.getElementById("message").innerText = "Email is sent to your given email ID: " + email;
-            } else {
-                document.getElementById("message").innerText = "Please enter an email.";
-            }
-        }
-    </script>
 </head>
 <body>
     <div class="header">
@@ -123,5 +113,19 @@
             <input type="submit" value="Confirm"><br>
         </form>
     </div>
+    <script>
+        function showMessage() {
+            let email = document.getElementById("emailInput").value.trim();
+            let messageElement = document.getElementById("message");
+            
+            if (email) {
+                messageElement.innerText = "A mail has been sent to your email ID: " + email;
+                messageElement.style.color = "green"; // Success message color
+            } else {
+                messageElement.innerText = "Please enter a valid email.";
+                messageElement.style.color = "red"; // Error message color
+            }
+        }
+    </script>
 </body>
 </html>
